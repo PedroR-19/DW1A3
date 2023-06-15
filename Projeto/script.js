@@ -12,6 +12,10 @@ async function converter(targetCurrency) {
   document.getElementById("dolar").textContent = "";
   document.getElementById("euro").textContent = "";
   document.getElementById("yens").textContent = "";
+  document.getElementById("pound").textContent = "";
+  document.getElementById("cad").textContent = "";
+  document.getElementById("peso").textContent = "";
+
 
   if (targetCurrency === "USD") {
     document.getElementById("dolar").textContent = `Valor em Dólar: $${convertedValue.toFixed(2)}`;
@@ -19,5 +23,11 @@ async function converter(targetCurrency) {
     document.getElementById("euro").textContent = `Valor em Euro: €${convertedValue.toFixed(2)}`;
   } else if (targetCurrency === "JPY") {
     document.getElementById("yens").textContent = `Valor em Yens: ¥${convertedValue.toFixed(2)}`;
+  } else if (targetCurrency === "GBP") {
+    document.getElementById("pound").textContent = `Valor em Libras Esterlinas: £${convertedValue.toFixed(2)}`;
+  } else if (targetCurrency === "CAD") {
+    document.getElementById("cad").textContent = `Valor em Dólar Canadense: C$${convertedValue.toFixed(2)}`;
+  } else if (targetCurrency === "ARS") {
+    document.getElementById("peso").textContent = `Valor em Peso Argentino: $${convertedValue.toFixed(2)} ARS`;
   }
 }
